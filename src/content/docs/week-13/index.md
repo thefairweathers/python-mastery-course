@@ -441,6 +441,12 @@ This server exposes `search_notes` and `create_note` as tools that Claude can ca
 
 ---
 
+## Labs
+
+- **[Lab 13.1: AI Agent](./lab-01-agent)** — Build an AI-powered agent with tool use and the Anthropic SDK
+
+---
+
 ## Capstone Project Ideas
 
 You now have all the skills to build substantial applications. Here are four project ideas that combine everything from the course:

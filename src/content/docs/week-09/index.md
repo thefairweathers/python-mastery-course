@@ -207,7 +207,7 @@ build/
 
 ## Labs
 
-- **[Lab 9.1: CLI Notes App](labs/lab_01_notes/)** — Build a complete CLI application with proper package structure
+- **[Lab 9.1: CLI Notes App](./lab-01-notes)** — Build a complete CLI application with proper package structure
 - **[Lab 9.2: Package Publishing](./lab-02-packaging)** — Create a `pyproject.toml` and install your package in development mode
 
 ---
