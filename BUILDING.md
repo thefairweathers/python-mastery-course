@@ -144,6 +144,12 @@ export default defineConfig({
 - `week-NN/lab-01-foo-bar.md` has slug `week-NN/lab-01-foo-bar`
 - Slugs must NOT start or end with `/`
 
+**Important: Adding new pages requires a sidebar entry.** Starlight uses an explicit sidebar configuration. Creating a new `.md` file under `src/content/docs/` is not enough — the page will build but **will not appear in the left-hand navigation** unless its slug is also added to the `sidebar` array in this file. When adding a new lab, you must update three places:
+
+1. Create the doc page: `src/content/docs/week-NN/lab-XX-slug.md`
+2. Create the scaffold file (if applicable): `public/scaffolds/week-NN/lab_XX_slug.py`
+3. Add the slug to the correct week's `items` array in `astro.config.mjs`
+
 ## Step 3: Content File Patterns
 
 ### Homepage — `src/content/docs/index.mdx`
@@ -561,6 +567,7 @@ dist/
 | Checkboxes are disabled/non-interactive | The `Head.astro` component removes the `disabled` attribute at runtime |
 | Links between pages broken | Install `astro-rehype-relative-markdown-links` and use relative paths like `./lab-01-foo` |
 | Scaffold files not accessible | Put them in `public/scaffolds/` — Astro serves `public/` as static assets |
+| New page not showing in sidebar | Starlight uses an explicit sidebar config — add the page's slug to the `sidebar` array in `astro.config.mjs` |
 
 ## Adapting for a New Course
 

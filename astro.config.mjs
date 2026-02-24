@@ -32,6 +32,7 @@ export default defineConfig({
             { slug: 'week-02', label: 'Lesson' },
             { slug: 'week-02/lab-01-types' },
             { slug: 'week-02/lab-02-strings' },
+            { slug: 'week-02/lab-03-numbers' },
           ],
         },
         {
@@ -39,6 +40,7 @@ export default defineConfig({
           items: [
             { slug: 'week-03', label: 'Lesson' },
             { slug: 'week-03/lab-01-fizzbuzz' },
+            { slug: 'week-03/lab-02-filter' },
           ],
         },
         {
@@ -46,6 +48,7 @@ export default defineConfig({
           items: [
             { slug: 'week-04', label: 'Lesson' },
             { slug: 'week-04/lab-01-memoize' },
+            { slug: 'week-04/lab-02-pipeline' },
           ],
         },
         {
@@ -53,6 +56,7 @@ export default defineConfig({
           items: [
             { slug: 'week-05', label: 'Lesson' },
             { slug: 'week-05/lab-01-inventory' },
+            { slug: 'week-05/lab-02-graph' },
           ],
         },
         {
@@ -60,6 +64,7 @@ export default defineConfig({
           items: [
             { slug: 'week-06', label: 'Lesson' },
             { slug: 'week-06/lab-01-events' },
+            { slug: 'week-06/lab-02-shapes' },
           ],
         },
         {
@@ -67,6 +72,7 @@ export default defineConfig({
           items: [
             { slug: 'week-07', label: 'Lesson' },
             { slug: 'week-07/lab-01-config' },
+            { slug: 'week-07/lab-02-logs' },
           ],
         },
         {
@@ -74,12 +80,15 @@ export default defineConfig({
           items: [
             { slug: 'week-08', label: 'Lesson' },
             { slug: 'week-08/lab-01-processor' },
+            { slug: 'week-08/lab-02-exceptions' },
           ],
         },
         {
           label: 'Week 09 — Modules & Packages',
           items: [
             { slug: 'week-09', label: 'Lesson' },
+            { slug: 'week-09/lab-01-notes' },
+            { slug: 'week-09/lab-02-packaging' },
           ],
         },
         {
@@ -87,6 +96,7 @@ export default defineConfig({
           items: [
             { slug: 'week-10', label: 'Lesson' },
             { slug: 'week-10/lab-01-testing' },
+            { slug: 'week-10/lab-02-quality' },
           ],
         },
         {
@@ -94,6 +104,8 @@ export default defineConfig({
           items: [
             { slug: 'week-11', label: 'Lesson' },
             { slug: 'week-11/lab-01-pipeline' },
+            { slug: 'week-11/lab-02-decorators' },
+            { slug: 'week-11/lab-03-async' },
           ],
         },
         {
@@ -101,6 +113,8 @@ export default defineConfig({
           items: [
             { slug: 'week-12', label: 'Lesson' },
             { slug: 'week-12/lab-01-api' },
+            { slug: 'week-12/lab-02-api' },
+            { slug: 'week-12/lab-03-analysis' },
           ],
         },
         {
