@@ -48,8 +48,8 @@ def split_bill(total: str, num_people: int, tip_percent: str) -> dict:
     Use ROUND_HALF_UP for all rounding.
 
     Example:
-        split_bill("100.00", 3, "18") should give per_person = Decimal("39.34")
-        with remainder = Decimal("-0.02") since 39.34 * 3 = 118.02 vs grand_total 118.00
+        split_bill("100.00", 3, "18") should give per_person = Decimal("39.33")
+        with remainder = Decimal("0.01") since 39.33 * 3 = 117.99 vs grand_total 118.00
     """
     # TODO: Implement this function
     pass
@@ -114,7 +114,7 @@ def test_split_bill():
     assert result["subtotal"] == Decimal("100.00")
     assert result["tip"] == Decimal("18.00")
     assert result["grand_total"] == Decimal("118.00")
-    assert result["per_person"] == Decimal("39.34")
+    assert result["per_person"] == Decimal("39.33")
     print("✓ split_bill passed")
 
 
