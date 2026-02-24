@@ -97,6 +97,21 @@ nav.sidebar details summary {
   gap: 0.5em;
 }
 
+/* ── Reset progress link ──────────────────────────────────────────────── */
+.reset-progress {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  color: var(--sl-color-gray-3);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.reset-progress:hover {
+  color: var(--sl-color-text);
+}
+
 /* ── Tables: horizontal scroll ─────────────────────────────────────────── */
 .sl-markdown-content table {
   display: block;

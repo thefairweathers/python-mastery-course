@@ -39,6 +39,7 @@ import Default from '@astrojs/starlight/components/Head.astro';
       var saved = localStorage.getItem(key);
       if (saved === 'true') cb.checked = true;
       else if (saved === 'false') cb.checked = false;
+      else localStorage.setItem(key, 'false');
 
       cb.addEventListener('change', function () {
         localStorage.setItem(key, cb.checked ? 'true' : 'false');
@@ -112,9 +113,43 @@ import Default from '@astrojs/starlight/components/Head.astro';
     });
   }
 
+  function resetAllProgress() {
+    var keysToRemove = [];
+    for (var i = 0; i < localStorage.length; i++) {
+      var key = localStorage.key(i);
+      if (key && key.startsWith('progress:')) keysToRemove.push(key);
+    }
+    keysToRemove.forEach(function (k) { localStorage.removeItem(k); });
+
+    document.querySelectorAll('.sl-markdown-content input[type="checkbox"]')
+      .forEach(function (cb) { cb.checked = false; });
+
+    updateProgress();
+    updateSidebarBadges();
+  }
+
+  function addResetButton() {
+    var sidebar = document.querySelector('nav.sidebar .sidebar-content');
+    if (!sidebar) sidebar = document.querySelector('nav.sidebar');
+    if (!sidebar || sidebar.querySelector('.reset-progress')) return;
+
+    var link = document.createElement('a');
+    link.href = '#';
+    link.className = 'reset-progress';
+    link.textContent = 'Reset progress';
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (confirm('Reset all progress? This will uncheck every item across all weeks.')) {
+        resetAllProgress();
+      }
+    });
+    sidebar.appendChild(link);
+  }
+
   function init() {
     initCheckboxes();
     updateSidebarBadges();
+    addResetButton();
   }
 
   if (document.readyState === 'loading') {

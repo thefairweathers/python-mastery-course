@@ -78,6 +78,19 @@ Use relative links with `./` prefix (not `labs/` or absolute paths).
 | Title format | `"Lab N.X: Title"` | `"Lab 3.2: Data Filter Pipeline"` |
 | Download path | `/python-mastery-course/scaffolds/week-NN/lab_XX_slug.py` | — |
 
+## Progress / Checkbox System
+
+`src/components/Head.astro` injects client-side JS that powers the progress system:
+
+- Markdown checkboxes (`- [ ]`) are made interactive (Starlight disables them by default)
+- Checkbox state is persisted to `localStorage` with keys like `progress:/path:hash`
+- On first visit to a page, all its checkboxes are registered in localStorage as unchecked
+- A progress bar appears at the top of pages that have checkboxes
+- Sidebar badges (e.g. "7/11") show checked/total counts across all pages in each week group
+- Sidebar badge totals only include pages the user has visited (checkboxes register on first visit)
+
+Every lab should include a `## Checklist` section with `- [ ]` items so it contributes to progress tracking.
+
 ## Content Conventions
 
 - Lessons and labs use standard GitHub-flavored Markdown
